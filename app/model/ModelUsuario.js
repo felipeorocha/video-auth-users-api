@@ -19,7 +19,8 @@ UsuarioSchema.pre('save', function(next) {
   bcrypt.genSalt(5, function(err, salt) {
     if (err) return next(err);
     bcrypt.hash(user.password, salt, null, function(err, hash) {
-      if (err) return next(err);
+      if (err)
+        return next(err);
       user.password = hash;
       next();
     });
@@ -28,7 +29,8 @@ UsuarioSchema.pre('save', function(next) {
 
 UsuarioSchema.methods.verificaSenha = function(password, next) {
   bcrypt.compare(password, this.password, function(err, isMatch) {
-    if (err) return next(err);
+    if (err)
+      return next(err);
     next(isMatch);
   });
 };

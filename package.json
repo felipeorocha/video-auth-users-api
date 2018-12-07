@@ -1,11 +1,16 @@
 {
   "name": "teste-api-jwt",
   "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "main": "server.js",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.11.0",
+    "cors": "^2.8.5",
     "express": "^4.11.2",
+    "jsonwebtoken": "^8.4.0",
     "jwt-simple": "^0.5.5",
     "moment": "^2.9.0",
     "mongodb": "^3.1.8",
