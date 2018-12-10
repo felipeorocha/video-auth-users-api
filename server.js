@@ -24,6 +24,10 @@ router.route('/usuarios')
 router.route('/login')
   .post(rotas.login);
 
+router.route('/videos')
+  .get(rotas.getVideos)
+  .post(rotas.postVideos);
+
 mongoose.connect(db);
 
 app.listen(8080, () => {
