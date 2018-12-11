@@ -17,14 +17,11 @@ module.exports = function(req, res) {
     }
 
     if (user !== null) {
-      console.log("user >>>>>>", user);
       user.verificaSenha(password, function(isMatch) {
         if (!isMatch) {
           console.log("Attempt failed to login with " + user.username);
           return res.send(401);
         }
-
-        console.log("user inside function >>>>>>", user);
   
       const expires = moment().add(7,'days').valueOf();
       const token = jwt.encode({

@@ -5,6 +5,5 @@ module.exports = {
   postUsuarios: require('../controller/controllerCriaUsuario'),
   login: require('../controller/controllerLogin'),
   getVideos: require('../controller/controllerVideos').index,
-  // postVideos: require('../controller/controllerCriaVideo')
   postVideos: require('../controller/controllerVideos').store
 }
