@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const jwt = require('jwt-simple');
 const cors = require('cors');
 
 const db = 'mongodb://127.0.0.1:27017';
